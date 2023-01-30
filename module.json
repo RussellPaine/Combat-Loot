@@ -1,0 +1,36 @@
+{
+    "id": "combat-loot",
+    "title": "Rusk's Combat Loot",
+    "description": "A simple way to easily roll loot for enemies and let the players choose how to divvy it up for the current encounter.",
+    "authors": [
+        {
+            "name": "Rusk"
+        }
+    ],
+    "version": "0.1",
+    "compatibility": {
+        "minimum": "10",
+        "verified": "10"
+    },
+    "relationships": {
+        "systems": [
+            {
+                "id": "dnd5e",
+                "type": "system"
+            }
+        ],
+        "requires": [
+            {
+                "id": "socketlib",
+                "type": "module"
+            }
+        ]
+    },
+    "socket": true,
+    "esmodules": [
+        "./src/module.js"
+    ],
+    "styles": [
+        "src/styles/styles.css"
+    ]
+}
