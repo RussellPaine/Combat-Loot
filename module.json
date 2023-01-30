@@ -28,9 +28,16 @@
     },
     "socket": true,
     "esmodules": [
-        "./src/module.js"
+        "./src/combat-loot.js"
     ],
     "styles": [
         "src/styles/styles.css"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "./languages/en.json"
+        }
     ]
 }

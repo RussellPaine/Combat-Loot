@@ -1,0 +1,9 @@
+#combat-loot {
+    min-width: 270px;
+    min-height: 250px;
+}
+
+.combat-loot__tracker-container {
+    margin: -8px;
+    height: calc(100% + 16px);
+}
