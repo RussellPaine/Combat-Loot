@@ -18,22 +18,6 @@ export class LootTracker extends FormApplication {
         await this.instance?.render();
     }
 
-    // static get defaultOptions() {
-    //     return foundry.utils.mergeObject(super.defaultOptions, {
-    //         classes: ["sheet"],
-    //         height: 600,
-    //         width: 350,
-    //         resizable: true,
-    //         editable: true,
-    //         id: "combat-tracker",
-    //         template: "modules/combat-loot/src/applications/tracker/tracker.hbs",
-    //         title: "combat-loot.tracker-title",
-    //         userId: game.userId,
-    //         closeOnSubmit: false,
-    //         submitOnChange: false
-    //     });
-    // }
-
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["sheet"],
