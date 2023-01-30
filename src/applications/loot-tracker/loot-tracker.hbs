@@ -1,3 +1,45 @@
-<form>
-    TEST
-</form>
+<div class="flexcol loot-tracker-container loot-tracker">
+    <div class="flex1">
+        <div class="loot-tracker-intro">
+            Select what is lootable by the players.
+        </div>
+        <div class="loot-tracker-header">
+            <h3 clss="">Items:</h3>
+        </div>
+        <div class="loot-tracker-items">
+
+        </div>
+    </div>
+    <div class="flex0">
+        <ol class="loot-tracker-currency">
+            <li class="loot-tracker-currency-item pp" title="Platinum">
+                <input type="text" step="any" name="system.currency.pp" id="72-system.currency.pp" value="0"
+                    class="lazymoney" onclick="this.select()">
+                <label for="72-system.currency.pp" class="denomination pp" data-denom="pp">pp</label>
+            </li>
+            <li class="loot-tracker-currency-item gp" title="Gold">
+                <input type="text" step="any" name="system.currency.gp" id="72-system.currency.gp" value="0"
+                    class="lazymoney" onclick="this.select()">
+                <label for="72-system.currency.gp" class="denomination gp" data-denom="gp">gp</label>
+            </li>
+            <li class="loot-tracker-currency-item ep" title="Electrum">
+                <input type="text" step="any" name="system.currency.ep" id="72-system.currency.ep" value="0"
+                    class="lazymoney" onclick="this.select()">
+                <label for="72-system.currency.ep" class="denomination ep" data-denom="ep">ep</label>
+            </li>
+            <li class="loot-tracker-currency-item sp" title="Silver">
+                <input type="text" step="any" name="system.currency.sp" id="72-system.currency.sp" value="0"
+                    class="lazymoney" onclick="this.select()">
+                <label for="72-system.currency.sp" class="denomination sp" data-denom="sp">sp</label>
+            </li>
+            <li class="loot-tracker-currency-item cp" title="Copper">
+                <input type="text" step="any" name="system.currency.cp" id="72-system.currency.cp" value="0"
+                    class="lazymoney" onclick="this.select()">
+                <label for="72-system.currency.cp" class="denomination cp" data-denom="cp">cp</label>
+            </li>
+        </ol>
+    </div>
+    <div class="flex0 loot-tracker-footer">
+        <button><i class="fas fa-eye"></i> Show Players</button>
+    </div>
+</div>

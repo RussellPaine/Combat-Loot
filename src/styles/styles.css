@@ -1,9 +1,83 @@
-#combat-loot {
-    min-width: 270px;
-    min-height: 250px;
+.loot-tracker-container {
+    margin: 8px;
+    height: calc(100%);
 }
 
-.combat-loot__tracker-container {
-    margin: -8px;
-    height: calc(100% + 16px);
+.loot-tracker-intro {
+    text-align: center;
+    flex: 0 1 auto;
+    height: 27px;
+}
+
+.loot-tracker-header {
+    border-top: 1px solid rgba(181, 179, 164, 1);
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.loot-tracker-items {
+    border: 1px solid var(--color-border-light-tertiary);
+    border-radius: 5px;
+    height: calc(100% - 80px);
+}
+
+.loot-tracker-currency {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    list-style: none;
+}
+
+.loot-tracker-footer {
+    border-top: 1px solid rgba(181, 179, 164, 1);
+    padding-top: 0.5rem;
+}
+
+.loot-tracker-currency-item input {
+    text-align: right;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding-left: 0.5rem;
+    box-shadow: 0px 0px 0 3px transparent inset;
+    transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+    color: rgba(0, 0, 0, 0.9);
+    display: block;
+    padding: 0;
+    padding-left: 0px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: none;
+}
+
+.loot-tracker-currency-item label {
+    text-transform: uppercase;
+    margin-left: 0.25rem;
+    -webkit-box-flex: unset;
+    -ms-flex: unset;
+    flex: unset;
+    line-height: 30px;
+    list-style: none;
+}
+
+.loot-tracker-currency-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0 0.5rem 0 0;
+    margin-right: 0.5rem;
+    line-height: 30px;
+}
+
+.loot-tracker h3 {
+    border: 0;
 }
