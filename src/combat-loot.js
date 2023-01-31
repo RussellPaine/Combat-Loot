@@ -1,5 +1,6 @@
 import { setupSocket } from "./socket.js";
 import { LootTracker } from "./applications/loot-tracker/loot-tracker.js";
+import { Rewards } from "./applications/rewards/rewards.js";
 
 Hooks.on("getSceneControlButtons", (controls) => {
     if (game.user.isGM) {
@@ -17,6 +18,37 @@ Hooks.on("getSceneControlButtons", (controls) => {
     }
 });
 
+Hooks.on("init", () => {
+
+    game.settings.register("combat-loot", "rewards", {
+        scope: "world",
+        type: Rewards,
+        default: {},
+        onChange: value => {
+            LootTracker.refresh();
+        }
+    });
+
+})
+
 Hooks.on("setup", () => {
+
     setupSocket();
+});
+
+Hooks.on("updateCombatant", (combatant, data) => {
+
+    if (game.user.isGM && Object.keys(data).includes("defeated")) {
+        const defeated = data.defeated;
+        const tokenDoc = combatant.token;
+        const actor = combatant.actor;
+
+        if (!actor.hasPlayerOwner && actor.system.details.xp?.value) {
+            if (!defeated) {
+                Tally.removeToken(tokenDoc);
+            } else {
+                Tally.addToken(tokenDoc);
+            }
+        }
+    }
 });
