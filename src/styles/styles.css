@@ -21,6 +21,39 @@
     height: calc(100% - 80px);
 }
 
+.loot-tracker-items-section {
+    background-color:rgba(174, 170, 170, 0.337);
+    padding: 7px;
+    border-bottom: 2px solid #7a7971;
+}
+
+.loot-tracker-item {
+    align-items: center;
+    padding: 5px;
+}
+
+.loot-tracker-item-details {
+    padding: 5px;
+}
+
+.loot-tracker-item-image {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #7a7971;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.loot-tracker-item-value {
+    text-transform: uppercase;
+    color: #7a7971;
+}
+
+.loot-tracker-item-action {
+    color: #7a7971;
+    padding: 0 10px;
+}
+
 .loot-tracker-currency {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -34,6 +67,7 @@
 .loot-tracker-footer {
     border-top: 1px solid rgba(181, 179, 164, 1);
     padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .loot-tracker-currency-item input {

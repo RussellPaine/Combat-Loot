@@ -23,8 +23,8 @@ Hooks.on("init", () => {
     game.settings.register("combat-loot", "rewards", {
         scope: "world",
         type: Rewards,
-        default: {},
-        onChange: value => {
+        default: new Rewards(),
+        onChange: _ => {
             LootTracker.refresh();
         }
     });
@@ -45,9 +45,9 @@ Hooks.on("updateCombatant", (combatant, data) => {
 
         if (!actor.hasPlayerOwner && actor.system.details.xp?.value) {
             if (!defeated) {
-                Tally.removeToken(tokenDoc);
+                // Tally.removeToken(tokenDoc);
             } else {
-                Tally.addToken(tokenDoc);
+                // Tally.addToken(tokenDoc);
             }
         }
     }
